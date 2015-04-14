@@ -47,8 +47,8 @@ table {
 body {
     font-family: 'PT Sans', sans-serif;
     min-height: 740px;
-    background: #444;
-    color: rgb(96, 204, 229);
+    background: #333;
+    color: #86E9FF;
 }
 
 b, strong {
@@ -70,6 +70,18 @@ a:focus {
     color: rgb(91, 139, 59);
 }
 
+small {
+    font-size: 22px;
+}
+
+.medium {
+    font-size: 24px;
+}
+
+.red {
+    color: rgb(249, 55, 136);
+}
+
 .main-header {
     position: absolute;
     width: 100%;
@@ -78,7 +90,7 @@ a:focus {
     display: flex;
     align-content: stretch;
     z-index: 1;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .main-header h1 {
@@ -146,7 +158,7 @@ nav #step-counter li a {
 
 .step {
     position: relative;
-    width: 900px;
+    width: 1000px;
     padding: 40px;
     margin: 20px auto;
     box-sizing: border-box;
@@ -157,7 +169,7 @@ nav #step-counter li a {
 
 .impress-enabled .step {
     margin: 0;
-    opacity: 0.3;
+    opacity: 0;
     transition: opacity 1s;
 }
 
@@ -167,18 +179,19 @@ nav #step-counter li a {
 
 .slide {
     display: block;
-    width: 900px;
+    width: 1000px;
     height: 700px;
     padding: 20px 40px;
-    background-color: white;
+    /*background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.3);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    color: #00728C;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);*/
+    color: #86E9FF;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 30px;
     line-height: 36px;
     letter-spacing: -1px;
+    overflow-y: auto;
 }
 
 .slide > section {
@@ -240,4 +253,14 @@ section ul li {
     opacity: 1;
     transform: translateY(0px);
     transition: opacity 1s 3s,         transform 0.5s 3s;
+}
+
+.aligning {
+    background: url("../img/flexAlignment.jpg");
+    max-width: 977px;
+    height: 375px;
+}
+
+.hljs {
+    background: #333;
 }

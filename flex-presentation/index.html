@@ -8,6 +8,7 @@
     
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
+    <link href="css/monokai.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     
     <!-- <link rel="shortcut icon" href="favicon.png" /> -->
@@ -36,40 +37,114 @@
                 <li>
                     streching, squeezing, equal heights and changing order elements
                 </li>
-            </ul>
-        </section>
-    </div>
-
-    <div title="Second Slide" class="step slide" data-z="-1000" data-rotate="-90" data-scale="1" data-x="0" data-y="-1500">
-        <section>
-            Flexbox is <strong>layout mode</strong>:
-            <ul>
-                <li>
-                    vertical and horizontal aligning regardless of devices and screen sizes  
+                <li class="red">
+                    Browser support!
+                    <a href="http://caniuse.com/#search=flexbox" target="_blank">caniuse flexbox</a>
+                    <br>
+                    <small>(Old versions of IE (9) and Opera (12)
+Touch: Opera Mini, don't support flexbox)</small>
+                </li>
+                <li class="red">
+                    Older versions are very slow!<br>
+                    <a href="https://plus.google.com/+PaulIrish/about">Paul Irish</a>
+                    <a href="http://updates.html5rocks.com/2013/10/Flexbox-layout-isn-t-slow">Speed Test</a>
                 </li>
             </ul>
         </section>
     </div>
 
-    <div title="Third Slide" class="step slide" data-z="-2000" data-rotate="-180" data-scale="1" data-x="1000" data-y="-1500">
-        <section>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</section>
-    </div>
-
-    <div title="Fourth Slide" class="step slide" data-z="-3000" data-rotate="-270" data-scale="1" data-x="2000" data-y="-1500">
-       <div>then you should try
-        impress.js
-        no rhyme intended
-        <a href="http://web-dev-pro.com" target="_blank">bobbykolev</a>
-        </div>
-    </div>
-
-    <div title="Fifth Slide With Long Very Title" class="step slide" data-z="-4000" data-rotate="-360" data-scale="1" data-x="3000" data-y="-1500">
-       <section>then you should try
-        impress.js
-        no rhyme intended <br>
+    <div title="History" class="step slide" data-z="-1000" data-rotate="-90" data-scale="1" data-x="0" data-y="-1500">
+        <section>
+          There are  three versions of flexbox:
+            <ul>
+                <li>
+                    new: <code>display: flex</code>
+                </li>
+                <li>
+                    tweener (unofficial syntax from 2012, adopted only by IE 10): <code>display: -ms-flexbox</code>
+                </li>
+                <li>
+                    old: <code>display: box</code>
+                </li>
+            </ul>  
         </section>
     </div>
-    <div title="Useful links" class="step slide" data-z="-5000" data-rotate="-450" data-scale="1" data-x="4000" data-y="-1500">
+
+    <div title="Basic usage" class="step slide" data-z="-2000" data-rotate="-180" data-scale="1" data-x="1000" data-y="-1500">
+        <section>
+            <pre><code class="css">
+                .parent  {
+                  display: flex;
+                  /* or inline-flex */
+                }
+                 .child  {
+                   flex: 1;
+                }
+            </code></pre>
+        </section>
+    </div>
+
+    <div title="Parent Container Props" class="step slide" data-z="-3000" data-rotate="-270" data-scale="1" data-x="2000" data-y="-1500">
+       <section>
+        <pre>
+            <code class="css medium">
+                .parent  {
+                  display: flex; 
+                  /* or inline-flex */
+
+                  flex-direction: row | row-reverse | column | column-reverse;
+                  
+                  flex-wrap: nowrap | wrap | wrap-reverse; /* poor BS */
+                  
+                  justify-content: flex-start | flex-end | center | space-between | space-around;
+                  
+                  align-items: flex-start | flex-end | center | baseline | stretch;
+                  
+                  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+                }
+
+                /* flex-flow: [flex-direction] || [flex-wrap]; */
+                /* default: row nowrap */
+            </code>
+        </pre> 
+       </section>
+    </div>
+
+    <div title="Flex Alignment" class="step slide" data-z="-4000" data-rotate="-360" data-scale="1" data-x="3000" data-y="-1500">
+       <section>
+        <div class="aligning"></div>
+        <small><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">source - css tricks</a></small>
+       </section>
+    </div>
+
+    <div title="Child" class="step slide" data-z="-4000" data-rotate="-450" data-scale="1" data-x="4000" data-y="-1500">
+       <section>
+        <pre>
+            <code class="css">
+                .child  {
+                  flex: [flex-grow] [flex-shrink] [flex-basis]; /* recommended */
+                  /* default: 0 1 auto */
+
+                  order: [integer];
+
+                  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+                }
+            </code>
+        </pre> 
+       </section>
+    </div>
+
+    <div title="Child Props" class="step slide" data-z="-4000" data-rotate="-540" data-scale="1" data-x="5000" data-y="-1500">
+       <section>
+        <ul>
+            <li>flex-grow [0] - defines the ability for a flex item to grow if necessary</li>
+            <li>flex-shrink [1] - defines the ability for a flex item to shrink if necessary</li>
+            <li>flex-basis [auto] - defines the default size of an element before the remaining space is distributed <a href="http://www.w3.org/TR/css3-flexbox/images/rel-vs-abs-flex.svg">w3 graphic</a></li>
+        </ul> 
+       </section>
+    </div>
+
+    <div title="Useful links" class="step slide" data-z="-5000" data-rotate="-630" data-scale="1" data-x="6000" data-y="-1500">
        <div class="links">
         <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank">developer.mozilla.org/Flexible_boxes</a>
         <a href="http://www.smashingmagazine.com/2015/03/02/harnessing-flexbox-for-todays-web-apps/" target="_blank">smashingmagazine.com/harnessing-flexbox-for-todays-web-apps/</a>
@@ -101,6 +176,13 @@ if ("ontouchstart" in document.documentElement) {
 </script>
 
 <script src="js/impress.js"></script>
-<script>impress().init();</script>
+<script src="js/highlight.js"></script>
+<script>
+    impress().init();
+    var arr =  document.getElementsByTagName('code');
+    for (var i = 0; i < arr.length; i++) {
+        hljs.highlightBlock(arr[i]);
+    };
+</script>
 </body>
 </html>
