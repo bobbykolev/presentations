@@ -256,6 +256,7 @@ section ul li {
 }
 
 .question {
+    font-family: monospace, sans-serif;
     text-align: center;
     font-size: 400px;
     line-height: 400px;
