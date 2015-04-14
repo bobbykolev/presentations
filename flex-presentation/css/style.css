@@ -255,6 +255,14 @@ section ul li {
     transition: opacity 1s 3s,         transform 0.5s 3s;
 }
 
+.question {
+    text-align: center;
+    font-size: 400px;
+    line-height: 400px;
+    -webkit-animation: spin 8s linear infinite;
+    animation: spin 8s linear infinite;
+}
+
 .aligning {
     background: url("../img/flexAlignment.jpg");
     max-width: 977px;
@@ -263,4 +271,17 @@ section ul li {
 
 .hljs {
     background: #333;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotateY(360deg);
+    }
 }
