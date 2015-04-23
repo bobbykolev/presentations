@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Presentation</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/monokai.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    
+    <!-- <link rel="shortcut icon" href="favicon.png" /> -->
+</head>
+<body class="impress-not-supported">
+<header id="header" class="main-header">
+    <h1 id="main-title"></h1>
+    <nav>
+        <ul id="step-counter">
+        </ul> 
+</nav>
+</header>
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+<div id="impress">
+
+    BS
+        es5-shim.js
+        es5-sham.js
+        html5shiv
+        https://facebook.github.io/react/docs/working-with-the-browser.html
+
+    <div id="first" title="What is reactjs" class="step slide" data-x="-1000" data-y="-1500">
+        <section>
+            <strong>Reactjs</strong> is Facebook library
+            "<strong>V</strong> in MVC"
+
+            It's component based. (analogue of angular directives)
+        </section>
+    </div>
+
+    <div title="Why" class="step slide" data-z="-1000" data-rotate="-90" data-scale="1" data-x="0" data-y="-1500">
+        <section>
+            <ul>
+                <li>Virtual DOM</li>
+                <li>Server rendering</li>
+                <li>Descriptive warnings</li>
+                <li>Custom event system</li>
+            </ul>
+        </section>
+    </div>
+
+    <div title="Virtual Dom" class="step slide" data-z="-2000" data-rotate="-180" data-scale="1" data-x="1000" data-y="-1500">
+        <section>
+            <a class="small" target="_blank" href="http://www.funnyant.com/wp-content/uploads/2014/07/reactjs-virtual-dom.png"></a>
+            1500 rows taking 1.35 seconds with AngularJS versus 310ms with ReactJs.
+        </section>
+    </div>
+
+    <div title="Who use it" class="step slide" data-z="-3000" data-rotate="-270" data-scale="1" data-x="2000" data-y="-1500">
+       <section>
+        <ul>
+            <li>
+                <a target="_blank" href="http://instagram.com/" target="_blank">Instagram.com</a><span> is 100% built on React, both public site and internal tools.</span>
+            </li>
+            <li>
+                <a target="_blank" href="http://www.facebook.com/" target="_blank">Facebook.com</a><span>‘s commenting interface, business management tools,</span><a href="http://facebook.com/lookback/edit" target="_blank"><span>Lookback video editor</span> </a><span >, page insights, and most, if not all, new JS development.</span>
+            </li>
+            <li >
+                <a target="_blank" href="http://khanacademy.org/" target="_blank">Khan Academy </a><span>uses React for most new JS development.</span>
+            </li>
+            <li >
+                <a target="_blank" href="http://sberbank.ru/moscow/ru/person/" target="_blank">Sberbank </a><span >, Russia’s number one bank, is built with React.</span>
+            </li>
+            <li >
+                <a target="_blank" href="http://www.nytimes.com/interactive/2014/02/02/fashion/red-carpet-project.html?_r=0" target="_blank">The New York Times’s 2014 Red Carpet Project </a><span>is built with React.</span>
+            </li>
+        </ul>
+       </section>
+    </div>
+
+    <div title="Seo" class="step slide" data-z="-4000" data-rotate="-360" data-scale="1" data-x="3000" data-y="-1500">
+       <section>
+            <p>
+                React is significantly more SEO friendly than most JavaScript MVC frameworks
+            </p>
+       </section>
+    </div>
+
+    <div title="Debug" class="step slide" data-z="-5000" data-rotate="-450" data-scale="1" data-x="4000" data-y="-1500">
+       <section>
+        <a class="small" target="_blank" href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi">chrome extension</a>
+       </section>
+    </div>
+
+    <div title="Disadvantages" class="step slide" data-z="-6000" data-rotate="-540" data-scale="1" data-x="5000" data-y="-1500">
+        <section>
+            <ul>
+                <li>it's functionl</li>
+                <li>differen thinking (not mvc)</li>
+                <li>needs node as server (could be client side, though)</li>
+                <li>JSX <a class="small" target="_blank" href="http://facebook.github.io/react/docs/jsx-gotchas.html">JSX gotchas</a></li>
+            </ul>
+        </section>
+    </div>
+
+
+
+   <!--  not paged properly -->
+
+
+    <div title="Lifecycle Methods" class="step slide" data-z="-6000" data-rotate="-540" data-scale="1" data-x="5000" data-y="-1500">
+       <section>
+            <ul>
+                <li>
+                    <strong>componentWillMount</strong> – Invoked once, on both client &amp; server before rendering occurs.
+                </li>
+                <li>
+                    <strong>componentDidMount</strong> – Invoked once, only on the client, after rendering occurs.
+                </li>
+                <li>
+                    <strong>shouldComponentUpdate</strong> – Return value determines whether component should update.
+                </li>
+                <li>
+                    <strong>componentWillUnmount</strong> – Invoked prior to unmounting component.
+                </li>
+            </ul>
+            <a class="small" target="_blank" href="http://facebook.github.io/react/docs/component-specs.html">more specs &amp; lifecycle</a>
+       </section>
+    </div>
+
+    <div title="Props State" class="step slide" data-z="-6000" data-rotate="-540" data-scale="1" data-x="5000" data-y="-1500">
+       <section>
+            <p>Every component has a state object and a props object.</p>
+            <a href="http://jsfiddle.net/vjeux/kb3gN/">props example</a>
+            <a href="http://codepen.io/kenwheeler/pen/kxrDu">state example</a>
+       </section>
+    </div>
+
+    <div title="It's one directional" class="step slide" data-z="-6000" data-rotate="-540" data-scale="1" data-x="5000" data-y="-1500">
+       <section>
+            <p></p>
+            <a href="http://codepen.io/kenwheeler/pen/jDKEo">filter list example</a>
+       </section>
+    </div>
+
+    
+
+
+
+
+
+
+    <div title="Useful links" class="step slide" data-z="-7000" data-rotate="-630" data-scale="1" data-x="6000" data-y="-1500">
+       <div class="links">
+            <a class="small" href="http://www.funnyant.com/reactjs-what-is-it/">reactjs-what-is-it</a>
+            <a href="https://scotch.io/tutorials/learning-react-getting-started-and-concepts">getting started and concepts</a>
+        </div>
+    </div>
+
+    <div title="Questions" class="step slide" data-z="-8000" data-rotate="-720" data-scale="1" data-x="7000" data-y="-1500">
+        <div class="question">?</div>
+    </div>
+
+    <div id="overview" title="All" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script src="js/highlight.js"></script>
+<script>
+    impress().init();
+    var arr =  document.getElementsByTagName('code');
+    for (var i = 0; i < arr.length; i++) {
+        hljs.highlightBlock(arr[i]);
+    };
+</script>
+</body>
+</html>
