@@ -33,7 +33,26 @@
     html5shiv
     https://facebook.github.io/react/docs/working-with-the-browser.html -->
 
-    <div id="first" title="What is reactjs" class="step slide" data-x="-1000" data-y="-1500">
+    <!-- 
+
+    //Contents
+    1.what is react
+    2.Why react
+    3.Disadvantages
+    4.Who use it
+    5.Virtual Dom
+    6.Components
+    7.JSX
+    8.props
+    9.Lifecycle methods
+    10.It's one directional
+    11.Mobile
+    12.Debug
+
+
+     -->
+
+    <div title="What is reactjs" class="step slide" data-x="-1000" data-y="-1500">
         <section>
             <strong>Reactjs</strong> is Facebook library
             "<strong>V</strong> in MVC"
@@ -42,27 +61,22 @@
         </section>
     </div>
 
-    <div title="Why" class="step slide" data-z="-1000" data-rotate="-90" data-scale="1" data-x="0" data-y="-1500">
+    <div title="Why React" class="step slide" data-z="-1000" data-rotate="-90" data-scale="1" data-x="0" data-y="-1500">
         <section>
+            <p>It's fast!</p>
+            <p class="small">significantly more SEO friendly than most JavaScript MVC frameworks</p>
             <ul>
-                <li>Virtual DOM</li>
-                <li>Server rendering</li>
-                <li>Descriptive warnings</li>
-                <li>Custom event system</li>
+                <li class="small">Virtual DOM</li>
+                <li class="small">Server rendering</li>
+                <li class="small">Descriptive warnings</li>
+                <li class="small">Custom event system</li>
             </ul>
         </section>
     </div>
 
-    <div title="Virtual Dom" class="step slide" data-z="-2000" data-rotate="-180" data-scale="1" data-x="1000" data-y="-1500">
+    <div title="Who use it" class="step slide" data-z="-2000" data-rotate="-180" data-scale="1" data-x="1000" data-y="-1500">
         <section>
-            <a class="small" target="_blank" href="http://www.funnyant.com/wp-content/uploads/2014/07/reactjs-virtual-dom.png"></a>
-            1500 rows taking 1.35 seconds with AngularJS versus 310ms with ReactJs.
-        </section>
-    </div>
-
-    <div title="Who use it" class="step slide" data-z="-3000" data-rotate="-270" data-scale="1" data-x="2000" data-y="-1500">
-       <section>
-        <ul>
+             <ul>
             <li>
                 <a target="_blank" href="http://instagram.com/" target="_blank">Instagram.com</a><span> is 100% built on React, both public site and internal tools.</span>
             </li>
@@ -79,14 +93,22 @@
                 <a target="_blank" href="http://www.nytimes.com/interactive/2014/02/02/fashion/red-carpet-project.html?_r=0" target="_blank">The New York Times’s 2014 Red Carpet Project </a><span>is built with React.</span>
             </li>
         </ul>
+        </section>
+    </div>
+
+    <div title="Virtual Dom" class="step slide" data-z="-3000" data-rotate="-270" data-scale="1" data-x="2000" data-y="-1500">
+       <section>
+            <a class="small" target="_blank" href="http://www.funnyant.com/wp-content/uploads/2014/07/reactjs-virtual-dom.png">virtual dom</a>
+            <a href="http://www.ibm.com/developerworks/library/wa-react-intro/figure1.png" class="small">bigger picture</a>
+            1500 rows taking 1.35 seconds with AngularJS versus 310ms with ReactJs.
+
+
        </section>
     </div>
 
     <div title="Seo" class="step slide" data-z="-4000" data-rotate="-360" data-scale="1" data-x="3000" data-y="-1500">
        <section>
-            <p>
-                React is significantly more SEO friendly than most JavaScript MVC frameworks
-            </p>
+
        </section>
     </div>
 
@@ -100,7 +122,9 @@
         <section>
             <ul>
                 <li>it's functionl</li>
-                <li>differen thinking (not mvc)</li>
+                <li>differen thinking (not mvc) 
+                <a href="http://facebook.github.io/react/docs/thinking-in-react.html" class="small">think in react</a>
+                </li>
                 <li>needs node as server (could be client side, though)</li>
                 <li>JSX <a class="small" target="_blank" href="http://facebook.github.io/react/docs/jsx-gotchas.html">JSX gotchas</a></li>
             </ul>
@@ -111,6 +135,38 @@
 
    <!--  not paged properly -->
 
+   
+    
+    <div title="Components" class="step slide" data-z="-6000" data-rotate="-540" data-scale="1" data-x="5000" data-y="-1500">
+       <section>
+            <p>simple functions that take in props and state (discussed later) and render HTML</p>
+            <code>
+                <pre>
+                    var CommentBox = React.createClass({
+                      render: function() {
+                        return (
+                          <div className="commentBox">
+                            Hello, world! I am a CommentBox.
+                          </div>
+                        );
+                      }
+                    });
+                    /* React.render(
+                      <CommentBox />,
+                      document.getElementById('content')
+                    ); */ 
+                </pre>
+            </code>
+            *note - you can render only single node    
+       </section>
+    </div>
+
+    <div title="JSX" class="step slide" data-z="-6000" data-rotate="-540" data-scale="1" data-x="5000" data-y="-1500">
+       <section>
+        <p>JSX lets you create JavaScript objects using HTML syntax.</p>
+           <a href="http://facebook.github.io/react/docs/displaying-data.html#jsx-syntax">JSX why</a>
+       </section>
+    </div>
 
     <div title="Lifecycle Methods" class="step slide" data-z="-6000" data-rotate="-540" data-scale="1" data-x="5000" data-y="-1500">
        <section>
@@ -135,6 +191,7 @@
     <div title="Props State" class="step slide" data-z="-6000" data-rotate="-540" data-scale="1" data-x="5000" data-y="-1500">
        <section>
             <p>Every component has a state object and a props object.</p>
+            <p>Remember: React is all about one-way data flow down the component hierarchy. It may not be immediately clear which component should own what state. This is often the most challenging part for newcomers to understand</p>
             <a href="http://jsfiddle.net/vjeux/kb3gN/">props example</a>
             <a href="http://codepen.io/kenwheeler/pen/kxrDu">state example</a>
        </section>
@@ -147,6 +204,12 @@
        </section>
     </div>
 
+
+    <div title="Mobile" class="step slide" data-z="-6000" data-rotate="-540" data-scale="1" data-x="5000" data-y="-1500">
+       <section>
+            <p>If you'd like to use React on a touch device such as a phone or tablet, simply call React.initializeTouchEvents(true); to enable touch event handling.</p>
+       </section>
+    </div>
     
 
 
@@ -156,6 +219,7 @@
 
     <div title="Useful links" class="step slide" data-z="-7000" data-rotate="-630" data-scale="1" data-x="6000" data-y="-1500">
        <div class="links">
+            <a href="http://facebook.github.io/react/">React official page</a>
             <a class="small" href="http://www.funnyant.com/reactjs-what-is-it/">reactjs-what-is-it</a>
             <a href="https://scotch.io/tutorials/learning-react-getting-started-and-concepts">getting started and concepts</a>
         </div>
