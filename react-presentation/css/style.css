@@ -284,6 +284,10 @@ section ul li {
     font-size: 26px;
 }
 
+.small {
+    font-size: 26px;
+}
+
 @keyframes spin {
     100% {
         transform: rotate(360deg);
