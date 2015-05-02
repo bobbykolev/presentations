@@ -70,7 +70,7 @@
             <p>It's fast! (1500 rows taking 1.35 seconds with AngularJS versus 310ms with ReactJs.)</p>
             <br>
             <p class="small">significantly more SEO friendly than most JavaScript MVC frameworks</p>
-            <img style="float:right;" src="http://www.4to40.com/images/jokes/adidas_too_fast_to_follow.jpg" alt="">
+            <img style="float:right;" src="img/fast.jpg" alt="">
             <ul>
                 <li class="small">Virtual DOM</li>
                 <li class="small">Server rendering</li>
@@ -87,10 +87,11 @@
                 <li>differen thinking (not mvc) 
                 <a href="http://facebook.github.io/react/docs/thinking-in-react.html" class="small">think in react</a>
                 </li>
-                <li>needs node as server (could be client side, though)</li>
                 <li>JSX <a class="small" target="_blank" href="http://facebook.github.io/react/docs/jsx-gotchas.html">JSX gotchas</a></li>
+                <li>It's not lightweight (<a targe="_blank" href="http://stackoverflow.com/a/19808686"> or not</a>)
+</li>
             </ul>
-            <!-- <img height="300" src="http://img.izismile.com/img/img3/20100218/upside_down_face_celebrities_05.jpg" alt=""> -->
+            <img height="300" src="img/weight.jpg" alt="">
         </section>
     </div>
 
@@ -128,31 +129,15 @@
     <div title="Components" class="step slide" data-z="-5000" data-rotate="-450" data-scale="1" data-x="4000" data-y="-1500">
         <section>
             <p>simple functions that take in props and state (discussed later) and render HTML</p>
-            <code>
-                <pre>
-                    var CommentBox = React.createClass({
-                      render: function() {
-                        return (
-                          <div className="commentBox">
-                            Hello, world! I am a CommentBox.
-                          </div>
-                        );
-                      }
-                    });
-                    /* React.render(
-                      <CommentBox />,
-                      document.getElementById('content')
-                    ); */ 
-                </pre>
-            </code>
-            *note - you can render only single node    
+            <div><img src="img/code.jpg" alt=""></div>
+            <p>*note - you can render only single node</p>  
        </section>
     </div>
 
     <div title="JSX" class="step slide" data-z="-6000" data-rotate="-540" data-scale="1" data-x="5000" data-y="-1500">
         <section>
         <p>JSX lets you create JavaScript objects using HTML syntax.</p>
-        <p><code><pre>/** @jsx React.DOM */</pre></code></p>
+        <p><pre><code>/** @jsx React.DOM */</code></pre></p>
            <a target="_blank" href="http://facebook.github.io/react/docs/displaying-data.html#jsx-syntax">JSX why</a>
        </section>    
     </div>
@@ -195,11 +180,13 @@
         <section>
             <p>Separation of Concerns</p>
             <a target="_blank" href="http://facebook.github.io/react/docs/multiple-components.html">example</a>
+            <div><img style="float:right;" src="img/soc.jpg" alt=""></div>
        </section>
     </div> 
 
     <div title="It's one directional" class="step slide" data-z="-10000" data-rotate="-900" data-scale="1" data-x="9000" data-y="-1500">
         <section>
+            <img style="float:right;" src="img/fight.jpg" alt="">
             <br>
             <a href="http://codepen.io/kenwheeler/pen/jDKEo">filter list example</a>
             <br>
@@ -212,6 +199,7 @@
                 </p>
                 <br>
                 <a target="_blank" href="http://facebook.github.io/react/docs/two-way-binding-helpers.html"> two-way data binding</a></p>
+
        </section>
     </div>
 
@@ -221,22 +209,26 @@
             <br>
             <p>gulp</p>
             <br>
-            <img width="500" src="https://devopsdotcom.files.wordpress.com/2012/11/screen-shot-2012-11-11-at-10-27-09-am.png" alt="">
+            <p class="small">"automate all the things : })"</p>
+            <img style="float:right;" src="img/build.jpg" alt="">
        </section>
     </div>
 
     <div title="More" class="step slide" data-z="-12000" data-rotate="-1080" data-scale="1" data-x="11000" data-y="-1500">
        <section>
         <h3>Style guide</h3>
-        <p><a target="_blank" href="https://reactjsnews.com/react-style-guide-patterns-i-like/">react style guide</a></p>
+        <p class="small"><a target="_blank" href="https://reactjsnews.com/react-style-guide-patterns-i-like/">react style guide</a></p>
         <br>
         <h3>React addons</h3>
-        <p>react-with-addons.js (experimental) - from one-way slide </p>  
-        <br>  
-        <h3>Mobile</h3>
-        <p>If you'd like to use React on a touch device such as a phone or tablet, simply call React.initializeTouchEvents(true); to enable touch event handling.</p>
+        <p class="small">react-with-addons.js (experimental) - from one-way slide </p>  
+        <br> 
+        <h3>Mixins</h3> 
+        <p><a href="https://facebook.github.io/react/docs/reusable-components.html#mixins">mixins</a> - reusable components (no mixins if you use ES6)</p>
         <br>
-        <h3>Degug</h3>
+        <h3>Mobile</h3>
+        <p class="small">React.initializeTouchEvents(true); to enable touch event handling.</p>
+        <br>
+        <h3>Debug</h3>
             <p><a class="small" target="_blank" href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi">chrome extension</a></p>
        </section>
     </div>
@@ -245,6 +237,8 @@
         <section>
             <p class="small">
                 Flux is the application architecture. It's more of a pattern rather than a formal framework.
+            </p>
+            <p> Only for application deals with dinamic data
             </p>
             <a href="https://facebook.github.io/flux/docs/overview.html"><img src="https://facebook.github.io/flux/img/flux-simple-f8-diagram-explained-1300w.png" alt=""></a>
        </section>
@@ -262,7 +256,10 @@
     </div>
 
     <div title="Questions" class="step slide" data-z="-15000" data-rotate="-1350" data-scale="1" data-x="14000" data-y="-1500">
-        <div class="question">?</div>
+        <div class="question" style="font-size: 80px;line-height:100px;">
+            ?
+            </div>
+            <div style="text-align:center;"><img src="img/check-in-minion.jpg" alt=""></div>
     </div>
 
     <div id="overview" title="All" class="step" data-x="3000" data-y="1500" data-scale="10">
