@@ -80,6 +80,11 @@ small {
     font-size: 22px;
 }
 
+q {
+    display: block;
+    padding: 0 30px;
+}
+
 .medium {
     font-size: 24px;
 }
@@ -290,7 +295,7 @@ section ul li {
 
 .small {
     font-size: 26px;
-    line-height: 26px
+    line-height: 26px;
 }
 
 @keyframes spin {
