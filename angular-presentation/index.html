@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Angular Presentation</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/github.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    
+    <!-- <link rel="shortcut icon" href="favicon.png" /> -->
+</head>
+<body class="impress-not-supported">
+<header id="header" class="main-header">
+    <h1 id="main-title"></h1>
+    <nav>
+        <ul id="step-counter">
+        </ul> 
+</nav>
+</header>
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+<div id="impress">
+
+<!--     BS
+    es5-shim.js
+    es5-sham.js
+    html5shiv
+    https://facebook.github.io/react/docs/working-with-the-browser.html -->
+
+    <!-- 
+
+    //Contents
+    1.what is react
+    2.Why react
+    3.Disadvantages
+    4.Who use it
+    5.Virtual Dom
+    6.Components
+    7.JSX
+    8.props
+    9.Lifecycle methods
+    10.Composition
+    11.It's one directional
+    12.More
+
+
+     -->
+
+    <div title="Angular" class="step slide" data-x="-1000" data-y="-1500">
+        <section>
+            <img src="http://angularjs4u.com/wp-content/uploads/2015/06/google-trends.jpg" alt="">
+        </section>
+    </div>
+
+    <div title="Main parts" class="step slide" data-z="-1000" data-rotate="-90" data-scale="1" data-x="0" data-y="-1500">
+        <section>
+            <ul>
+                <li class="small">Model -app data</li>
+                <li class="small">View</li>
+                <li class="small">Controller - behaviour</li>
+                <li class="small">Scope glue (data and behaviour)</li>
+                <li class="small">$ - namespace</li>
+                <li class="small">Injector assembles the app</li>
+            </ul>
+        </section>
+    </div>
+
+    <div title="Angular init" class="step slide" data-z="-2000" data-rotate="-180" data-scale="1" data-x="1000" data-y="-1500">
+        <section>
+            <div>
+            Angular waits for DOMContentLoaded event and looks for ng-app directive. The module of ng-app configure the injector.
+            The injector is used to create $compile service and $rootScope.
+            </div>
+        </section>
+    </div>
+
+    <div title="MVVM" class="step slide" data-z="-3000" data-rotate="-270" data-scale="1" data-x="2000" data-y="-1500">
+        <section>
+             <img src="https://i-msdn.sec.s-msft.com/dynimg/IC448690.png" alt="">
+        </section>
+    </div>
+
+    <div title="Directives Expressions" class="step slide" data-z="-4000" data-rotate="-360" data-scale="1" data-x="3000" data-y="-1500">
+       <section>
+        <h3>Directive</h3>
+        <br>
+            <div>
+                Compile traverse the DOM and collect all directives. Makes links.
+                Link combines directive with the scope (creates two way binding).
+            </div>
+            <div>
+                Directive is just a function that which executes when the compiler encounters it in the DOM.
+            </div>
+             <br>
+            <h3>Expression {{}}</h3>
+             <br>
+        <pre><code>
+            3={{2+1}}
+        </code></pre>
+       </section>
+    </div>
+
+    <div title="Other" class="step slide" data-z="-5000" data-rotate="-450" data-scale="1" data-x="4000" data-y="-1500">
+        <section>
+            <li class="small">Routing</li>
+                <li class="small">DI, SOC</li>
+                <li class="small">Services</li>
+                <li class="small">Filters</li>
+                <li class="small">$q, $timeout, $window, $interval, $broadcast, $on, $location...</li>
+       </section>
+    </div>
+
+    <div title="Directives" class="step slide" data-z="-6000" data-rotate="-540" data-scale="1" data-x="5000" data-y="-1500">
+        <section>
+         <h3>Reusable components:</h3>
+         <br>
+         <a href="https://www.airpair.com/angularjs/posts/ng-directive-componentization-composition">Example</a>
+         <br>
+         <a href="https://docs.angularjs.org/guide/directive">Example Docs</a>
+       </section>    
+    </div>
+
+    <div title="Advanced" class="step slide" data-z="-7000" data-rotate="-630" data-scale="1" data-x="6000" data-y="-1500">
+        <section>
+            <h3><a href="https://docs.angularjs.org/guide/providers">Provider</a></h3>  
+            <div><a href="https://docs.angularjs.org/api/auto/service/$provide">Provider</a> is the most complex "recipe" type. You don't need it unless you are building a reusable piece of code that needs global configuration.</div> 
+            <br>
+            <h3><a href="https://docs.angularjs.org/guide">Dev Guide</a></h3>
+       </section>      
+    </div>
+
+    <div title="Learning Curve" class="step slide" data-z="-8000" data-rotate="-720" data-scale="1" data-x="7000" data-y="-1500">
+        <section>
+            <img src="http://www.bennadel.com/resources/uploads/2013/feelings_about_angularjs_over_time.png" alt="">
+       </section>    
+    </div>
+
+    <div title="Questions"  class="step slide" data-z="-9000" data-rotate="-810" data-scale="1" data-x="8000" data-y="-1500">
+        <div class="question" style="font-size: 80px;line-height:100px;">
+            ?
+            </div>
+            <div style="text-align:center;"><img src="img/check-in-minion.jpg" alt=""></div>
+    </div>
+
+    <div id="overview" title="All" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script src="js/highlight.js"></script>
+<script>
+    impress().init();
+    var arr =  document.getElementsByTagName('code');
+    for (var i = 0; i < arr.length; i++) {
+        hljs.highlightBlock(arr[i]);
+    };
+</script>
+</body>
+</html>
