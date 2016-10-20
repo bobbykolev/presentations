@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>ng2-cli Presentation</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/github.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    
+    <!-- <link rel="shortcut icon" href="favicon.png" /> -->
+</head>
+<body class="impress-not-supported">
+<header id="header" class="main-header">
+    <h1 id="main-title"></h1>
+    <nav>
+        <ul id="step-counter">
+        </ul> 
+</nav>
+</header>
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+<div id="impress">
+    <!-- 
+
+    //Contents
+    1. Contents
+    2. angular-cli
+    3. common errors
+    4. setup project
+    5. 
+     -->
+
+    <div title="Contents" class="step slide" data-x="-1000" data-y="-1500">
+        <section>
+            <ul>
+                <li>what's angular-cli</li>
+                <li>Installation (common errors)</li>
+                <li>Setup and manage a project</li>
+                <li>Setup the routing (not included in ng-cli)</li>
+            </ul>
+        </section>
+    </div>
+
+    <div title="angular-cli" class="step slide" data-z="-1000" data-scale="1" data-x="0" data-y="-1500">
+        <section>
+            <a target="_blank" href="https://cli.angular.io/">cli.angular.io</a>   
+            <a target="_blank" href="https://angular.io/styleguide">ng2 Style guide</a>   
+        </section>
+    </div>
+
+    <div title="Instalation - Common errors" class="step slide" data-z="-2000" data-rotate="-90" data-scale="1" data-x="1000" data-y="-1500">
+        <section>
+            <p><strong><em>npm install -g angular-cli</em></strong></p>
+            <h4>Errors</h4>
+            <p>Permissions - <a target="_blank" href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">fixing npm permissions</a></p>
+            <p>Set Registry - <a target="_blank" href="https://docs.npmjs.com/misc/registry">npm registry</a></p>
+            <p>Other...</a></p>
+            <pre><code>
+                npm uninstall -g angular-cli
+                npm cache clean
+                npm install -g angular-cli@latest
+            </code></pre>
+        </section>
+    </div>
+
+    <div title="Setup a project" class="step slide" data-z="-3000" data-rotate="-90" data-scale="1" data-x="2000" data-y="-1500">
+        <section>
+            <p>ng new my-app</p>
+            <h4>Additional options:</h4>
+            <p>--style=sass</p>
+            <h4>Serve locally:</h4>
+            <p>ng serve (--prod)</p>
+        </section>
+    </div>
+
+    <div title="Common commands" class="step slide" data-z="-4000" data-rotate="-180" data-scale="1" data-x="3000" data-y="-1500">
+        <section>
+            <ul>
+                <li><strong><em>Component</em></strong> ng g component my-new-component</li>
+                <li><strong><em>Directive</em></strong> ng g directive my-new-directive</li>
+                <li><strong><em>Pipe</em></strong>      ng g pipe my-new-pipe</li>
+                <li><strong><em>Service</em></strong>   ng g service my-new-service</li>
+                <li><strong><em>Class</em></strong>     ng g class my-new-class</li>
+                <li><strong><em>Interface</em></strong> ng g interface my-new-interface</li>
+                <li><strong><em>Enum</em></strong>      ng g enum my-new-enum</li>
+                <li><strong><em>Module</em></strong>    ng g module my-module</li>
+            </ul>
+            <p>--flat; --route (* not working ATM)</p>
+        </section>
+    </div>
+
+    <div title="Setup Routing" class="step slide" data-z="-5000" data-rotate="-180" data-scale="1" data-x="4000" data-y="-1500">
+        <section>
+            <pre><code>
+//add to app.module.ts
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
+
+//in imports
+RouterModule.forRoot(routes)</pre></code>
+<pre><code>
+//home.routes.ts
+import { Route } from '@angular/router';
+import { HomeComponent } from './home.component';
+
+export const HomeRoutes: Route[] = [
+  {
+    path: '',
+    component: HomeComponent
+  }
+];</pre></code>
+        </section>
+    </div>
+
+    <div title="Setup Routing 2" class="step slide" data-z="-6000" data-rotate="-270" data-scale="1" data-x="5000" data-y="-1500">
+        <section>
+<pre><code>
+//app.routes.ts
+import { Routes } from '@angular/router';
+
+import { HomeRoutes } from './home/home.routes';
+
+export const routes: Routes = [
+  ...HomeRoutes
+  { path: '**', redirectTo: '/', pathMatch: 'full'}
+];
+            </pre></code>
+        </section>
+    </div>
+
+    <div title="Other commands" class="step slide" data-z="-7000" data-rotate="-270" data-scale="1" data-x="6000" data-y="-1500">
+        <section>
+            <a href="https://cli.angular.io/reference.pdf">reference</a> 
+            <ul>
+                <li>e2e</li>
+                <li>test</li>
+                <li>build --prod</li>
+                <li>...</li>
+            </ul>  
+        </section>
+    </div>
+
+    <div title="Start today" class="step slide" data-z="-8000" data-rotate="-360" data-scale="1" data-x="7000" data-y="-1500">
+        <section>
+            Start with ng2 and angular-cli today!    
+        </section>
+    </div>
+    
+    <div title="Questions" class="step slide" data-z="-15000" data-rotate="-1350" data-scale="1" data-x="14000" data-y="-1500">
+        <div class="question" style="font-size: 80px;line-height:100px;">
+            ?
+            </div>
+            <div style="text-align:center;"><img src="img/check-in-minion.jpg" alt=""></div>
+    </div>
+     -->
+     <div id="overview" title="All" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script src="js/highlight.js"></script>
+<script>
+    impress().init();
+    var arr =  document.getElementsByTagName('code');
+    for (var i = 0; i < arr.length; i++) {
+        hljs.highlightBlock(arr[i]);
+    };
+</script>
+</body>
+</html>
