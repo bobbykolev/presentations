@@ -33,7 +33,8 @@
     2. angular-cli
     3. common errors
     4. setup project
-    5. 
+    5. routing
+    6. adding external libs
      -->
 
     <div title="Contents" class="step slide" data-x="-1000" data-y="-1500">
@@ -43,6 +44,7 @@
                 <li>Installation (common errors)</li>
                 <li>Setup and manage a project</li>
                 <li>Setup the routing (not included in ng-cli)</li>
+                <li>Adding external libraries</li>
             </ul>
         </section>
     </div>
@@ -103,7 +105,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 
 //in imports
-RouterModule.forRoot(routes)</pre></code>
+RouterModule.forRoot(routes)</code></pre>
 <pre><code>
 //home.routes.ts
 import { Route } from '@angular/router';
@@ -114,7 +116,7 @@ export const HomeRoutes: Route[] = [
     path: '',
     component: HomeComponent
   }
-];</pre></code>
+];</code></pre>
         </section>
     </div>
 
@@ -130,11 +132,30 @@ export const routes: Routes = [
   ...HomeRoutes
   { path: '**', redirectTo: '/', pathMatch: 'full'}
 ];
-            </pre></code>
+            </code></pre>
         </section>
     </div>
 
-    <div title="Other commands" class="step slide" data-z="-7000" data-rotate="-270" data-scale="1" data-x="6000" data-y="-1500">
+    <div title="External libs" class="step slide" data-z="-7000" data-rotate="-270" data-scale="1" data-x="6000" data-y="-1500">
+        <section>
+            <pre>
+            <code>
+                npm install bootstrap@next --save
+                //angular-cli.json -  insert into apps[0].scripts:
+                "scripts": [
+                    "../node_modules/bootstrap/dist/js/bootstrap.js"
+                ],
+                "styles": [
+                    "styles.scss",
+                    "../node_modules/bootstrap/dist/css/bootstrap.css"
+                ]
+            </code>
+            </pre>
+            or import the bootstrap.scss into your styles.scss  
+        </section>    
+    </div>
+
+    <div title="Other commands" class="step slide" data-z="-8000" data-rotate="-360" data-scale="1" data-x="7000" data-y="-1500">
         <section>
             <a href="https://cli.angular.io/reference.pdf">reference</a> 
             <ul>
@@ -146,7 +167,7 @@ export const routes: Routes = [
         </section>
     </div>
 
-    <div title="Start today" class="step slide" data-z="-8000" data-rotate="-360" data-scale="1" data-x="7000" data-y="-1500">
+    <div title="Start today" class="step slide" data-z="-9000" data-rotate="-360" data-scale="1" data-x="8000" data-y="-1500">
         <section>
             Start with ng2 and angular-cli today!    
         </section>
@@ -159,7 +180,7 @@ export const routes: Routes = [
             <div style="text-align:center;"><img src="img/check-in-minion.jpg" alt=""></div>
     </div>
      -->
-     <div id="overview" title="All" class="step" data-x="3000" data-y="1500" data-scale="10">
+     <div id="overview" title="All" class="step" data-x="2000" data-y="1500" data-scale="8">
     </div>
 
 </div>
