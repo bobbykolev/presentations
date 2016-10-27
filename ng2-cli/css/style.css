@@ -310,6 +310,21 @@ section ul li {
     line-height: 26px;
 }
 
+.flex-container {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 40px);
+}
+
+.flex-container ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items:center;
+    justify-content:center;
+}
+
 @keyframes spin {
     100% {
         transform: rotate(360deg);
