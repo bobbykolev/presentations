@@ -105,7 +105,7 @@
         </section>
     </div>
 
-    <div title="Setup Routing" class="step slide" data-z="-5000" data-rotate="-180" data-scale="1" data-x="4000" data-y="-1500">
+    <div title="Setup Routing" class="step slide" data-z="-5000" data-rotate="-180" data-scale="1" data-x="4500" data-y="-1500">
         <section>
             <pre><code>
 //add to app.module.ts
@@ -121,14 +121,14 @@ import { HomeComponent } from './home.component';
 
 export const HomeRoutes: Route[] = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent
   }
 ];</code></pre>
         </section>
     </div>
 
-    <div title="Setup Routing 2" class="step slide" data-z="-6000" data-rotate="-270" data-scale="1" data-x="5000" data-y="-1500">
+    <div title="Setup Routing 2 - the routes" class="step slide" data-z="-6000" data-rotate="-270" data-scale="1" data-x="6000" data-y="-1500">
         <section>
 <pre><code>
 //app.routes.ts
@@ -137,14 +137,27 @@ import { Routes } from '@angular/router';
 import { HomeRoutes } from './home/home.routes';
 
 export const routes: Routes = [
-  ...HomeRoutes
-  { path: '**', redirectTo: '/', pathMatch: 'full'}
+  ...HomeRoutes,
+  { path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];
+            </code></pre>
+            <div class="small">
+                //the router views container <br>
+                router-outlet
+            <div>
+        </section>
+    </div>
+
+    <div title="Setup Routing 3 - add links" class="step slide" data-z="-7000" data-rotate="-270" data-scale="1" data-x="7500" data-y="-1500">
+        <section>
+        <pre><code>
+            //link to the home route
+            routerLink="/home" routerLinkActive="active"
             </code></pre>
         </section>
     </div>
 
-    <div title="External libs" class="step slide" data-z="-7000" data-rotate="-270" data-scale="1" data-x="6000" data-y="-1500">
+    <div title="External libs" class="step slide" data-z="-8000" data-rotate="-360" data-scale="1" data-x="9000" data-y="-1500">
         <section>
             <pre>
             <code>
@@ -163,7 +176,7 @@ export const routes: Routes = [
         </section>    
     </div>
 
-    <div title="Other commands" class="step slide" data-z="-8000" data-rotate="-360" data-scale="1" data-x="7000" data-y="-1500">
+    <div title="Other commands" class="step slide" data-z="-9000" data-rotate="-360" data-scale="1" data-x="10500" data-y="-1500">
         <section>
             <a href="https://cli.angular.io/reference.pdf">reference</a> 
             <ul>
@@ -175,7 +188,7 @@ export const routes: Routes = [
         </section>
     </div>
 
-    <div title="Start today" class="step slide" data-z="-9000" data-rotate="-360" data-scale="1" data-x="8000" data-y="-1500">
+    <div title="Start today" class="step slide" data-z="-10000" data-rotate="-450" data-scale="1" data-x="12000" data-y="-1500">
         <section>
             Start with ng2 and angular-cli today!    
         </section>
@@ -188,7 +201,7 @@ export const routes: Routes = [
             <div style="text-align:center;"><img src="img/check-in-minion.jpg" alt=""></div>
     </div>
      -->
-     <div id="overview" title="All" class="step" data-x="2000" data-y="0" data-scale="8">
+     <div id="overview" title="All" class="step" data-x="3000" data-y="0" data-scale="9">
     </div>
 
 </div>
