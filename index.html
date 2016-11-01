@@ -19,7 +19,8 @@
             prespective:1000;
             -webkit-transform: scale(0.9);
             transform: scale(0.9);
-            transition: 0.5s; 
+            transition: 0.5s;
+            text-decoration: none;
         }
         a:hover {
             opacity: 1;
@@ -29,11 +30,23 @@
         img {
             float: left;
         }
+        .angular > div {
+            font-size: 20px;
+            font-family: Arial;
+            font-weight: 700;
+            color: red;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            width: 200px;
+            height: 200px;
+        }
     </style>
     <!-- <link rel="shortcut icon" href="favicon.png" /> -->
 </head>
 <body>
     <a href="flex-presentation/index.html"><img width="200" height="200" src="flexbox.jpg" alt=""></a>
     <a href="react-presentation/index.html"><img width="200" height="200" src="react.svg" alt=""></a>
+    <a href="ng2-cli/index.html" class="angular"><div>Angular-cli</div></a>
 </body>
 </html>
